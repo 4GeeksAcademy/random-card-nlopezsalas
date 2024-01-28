@@ -26,17 +26,13 @@ window.onload = function() {
   };
 
   function printCard() {
-    document.querySelector("#card").className =
-      "card " + generateRandomCard(card.suits);
-    document.querySelector("#number").innerHTML = generateRandomCard(
-      card.numbers
-    );
+    document.querySelector("#card").className = "card " + generateRandomCard(card.suits);
+    document.querySelector("#number").innerHTML = generateRandomCard(card.numbers);
   }
 
   printCard();
 
   //BOTÓN
-
   let button = document.getElementById("btnGenerateCard");
   button.addEventListener("click", function(e) {
     printCard();
@@ -70,15 +66,12 @@ window.onload = function() {
 
   function updateDimensions(e) {
     const dimensionType = e.target.id.includes("Height") ? "height" : "width";
-    currentCard.style[dimensionType] =
-      e.target.value + (dimensionType === "width" ? "" : "px");
+    currentCard.style[dimensionType] = e.target.value + (dimensionType === "width" ? "" : "px");
   }
 };
 
 function generateRandomCard(array) {
   let indexRandom = Math.floor(Math.random() * array.length);
-  console.log("Resultado del random card");
-  console.log(array[indexRandom]);
   return array[indexRandom];
 }
 
