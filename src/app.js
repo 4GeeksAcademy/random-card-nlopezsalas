@@ -26,8 +26,11 @@ window.onload = function() {
   };
 
   function printCard() {
-    document.querySelector("#card").className = "card " + generateRandomCard(card.suits);
-    document.querySelector("#number").innerHTML = generateRandomCard(card.numbers);
+    document.querySelector("#card").className =
+      "card " + generateRandomCard(card.suits);
+    document.querySelector("#number").innerHTML = generateRandomCard(
+      card.numbers
+    );
   }
 
   printCard();
@@ -66,7 +69,8 @@ window.onload = function() {
 
   function updateDimensions(e) {
     const dimensionType = e.target.id.includes("Height") ? "height" : "width";
-    currentCard.style[dimensionType] = e.target.value + (dimensionType === "width" ? "" : "px");
+    currentCard.style[dimensionType] =
+      e.target.value + (dimensionType === "width" ? "" : "px");
   }
 };
 
