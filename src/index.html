@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random cards</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -11,18 +11,74 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <meta name="author" content="Connor, Barbara, Pedro, Natalia" />
   </head>
-  <body>
+  <body class="bg-success mt-2">
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <!--PROGRES BARR-->
+      <div class="row mt-0">
+        <div class="col">
+          <div class="progress" style="height: 2px;">
+            <div
+              id="bar"
+              class="progress-bar progress-bar-striped active bg-warning"
+              role="progressbar"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 0%"
+            >
+              <span class="sr-only">0% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--CARD-->
+      <div class="row justify-content-center mt-3">
+        <div id="card" class="card">
+          <div class="card-body">
+            <h2 class="align-middle" id="number"></h2>
+          </div>
+        </div>
+      </div>
+      <!--BUTTON-->
+      <div class="row mt-3 mb-3">
+        <div class="col">
+          <button id="btnGenerateCard" class="btn btn-light">
+            Generate Card
+          </button>
+        </div>
+      </div>
+
+      <!--INPUTS WITHD + HEIGHT-->
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="selectWidth"
+              placeholder="400px"
+              value="400px"
+            />
+            <label for="floatingInputGrid">Width</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select
+              class="form-select"
+              id="selectHeight"
+              aria-label="Floating label select example"
+            >
+              <option selected>Select one height</option>
+              <option value="600">600px</option>
+              <option value="500">500px</option>
+              <option value="400">400px</option>
+            </select>
+            <label for="floatingSelectGrid">Height</label>
+          </div>
+        </div>
       </div>
     </div>
   </body>
