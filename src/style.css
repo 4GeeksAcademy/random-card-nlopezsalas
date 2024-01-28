@@ -45,6 +45,7 @@ p {
 .spade::before,
 .spade::after {
   content: "♠";
+  color: black;
 }
 .heart::before,
 .heart::after {
@@ -59,6 +60,7 @@ p {
 .club::before,
 .club::after {
   content: "♣";
+  color: black;
 }
 .spade::after,
 .heart::after,
